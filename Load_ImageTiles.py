@@ -30,7 +30,7 @@ class LoadImages:
                 image_name = dir_Name + "-" + str(x) + "_" + str(y) + ".tiff"
                 status = threshold(image_tile,self.image_size)
                 if status:
-                    cv2.imwrite(path+image_name, image_tile)
+                    cv2.imwrite(self.image_path+image_name, image_tile)
 
      def threshold(image,image_size):
          img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
